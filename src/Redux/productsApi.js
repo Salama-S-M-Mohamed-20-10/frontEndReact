@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 // Get all data
 export const productsApi = createApi({
   reducerPath: 'productsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://backend-node-olive.vercel.app/' }),
   endpoints: (builder) => ({
     getproductsByName: builder.query({//<products, string>
       query: (name) => `products`,
@@ -16,7 +16,7 @@ export const productsApi = createApi({
 // Get only one product
 export const oneProductApi = createApi({
   reducerPath: 'oneProductApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://backend-node-olive.vercel.app/' }),
   endpoints: (builder) => ({
     getOneProductByName: builder.query({//<products, string>
       query: (name) => `products/${name}`,
